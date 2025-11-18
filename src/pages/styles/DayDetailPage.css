@@ -1,0 +1,162 @@
+.frame { background-color:#000; width:100%; height:100vh; position:relative; overflow-y:auto; overflow-x:hidden; }
+.div-wrapper { position:fixed; top:0; left:0; width:100%; height:80px; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:0 24px; background:#000; }
+.text-wrapper-3 { position:relative; width:auto; height:75px; font-size:48px; display:flex; align-items:center; justify-content:flex-start; font-family:"Montserrat", Helvetica, Arial, sans-serif; font-weight:700 !important; color:#f0f0fa; text-decoration:none; }
+.nav-right { display:flex; align-items:center; gap:24px; }
+.nav-link-right { color:#f0f0fa; font-family:"Montserrat-Medium", Helvetica; font-size:20px; text-decoration:none; }
+.nav-link-right:hover { text-decoration: underline; }
+.img { position:absolute; top:131px; left:0; width:100%; height:calc(100vh - 131px); object-fit:cover; }
+.details-header { position:absolute; top:207px; left:273px; width:1375px; height:95px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #d8d8e0; }
+.details-title { font-family:"Montserrat", Helvetica, Arial, sans-serif; font-weight:700; font-size:40px; color:#d8d8e0; }
+.breadcrumbs {
+  position: absolute;
+  top: 170px;
+  left: 273px;
+  width: 1375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #d8d8e0;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 18px;
+}
+.crumb-link { color:#d8d8e0; text-decoration:none; }
+.crumb-link:hover { text-decoration: underline; }
+.crumb-sep { opacity: 0.6; }
+.crumb-current { color:#f0f0fa; font-weight:600; }
+.details-text { position:absolute; top:270px; left:273px; width:702px; display:flex; flex-direction:column; gap:16px; }
+.bennu-RA { margin:0; font-family:"Montserrat-Medium", Helvetica; font-weight:500; color:#d8d8e0; font-size:24px; line-height:1.3; white-space:pre-line; }
+.details-image { position:absolute; top:340px; left:1000px; width:500px; height:400px; object-fit:cover; }
+
+/* Адаптивность: > 1200px */
+@media (min-width: 1201px) {
+  .details-header, .breadcrumbs, .details-text {
+    left: 273px;
+    width: 1375px;
+  }
+  
+  .details-image {
+    left: 1000px;
+    width: 500px;
+  }
+}
+
+/* Адаптивность: 768px - 1200px */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .details-header, .breadcrumbs, .details-text {
+    left: 5%;
+    width: 90%;
+  }
+  
+  .details-image {
+    left: auto;
+    right: 5%;
+    width: 400px;
+  }
+  
+  .details-title {
+    font-size: 36px;
+  }
+  
+  .bennu-RA {
+    font-size: 22px;
+  }
+}
+
+/* Адаптивность: 768px */
+@media (max-width: 768px) {
+  .details-header, .breadcrumbs, .details-text, .details-image {
+    left: 2%;
+    width: 96%;
+    position: relative;
+    top: auto;
+    margin-top: 20px;
+  }
+  
+  .details-header {
+    top: 150px;
+    margin-top: 0;
+  }
+  
+  .breadcrumbs {
+    top: 120px;
+    margin-top: 0;
+    font-size: 16px;
+  }
+  
+  .details-text {
+    top: 200px;
+    margin-top: 0;
+  }
+  
+  .details-image {
+    top: 280px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  
+  .details-title {
+    font-size: 32px;
+  }
+  
+  .bennu-RA {
+    font-size: 20px;
+  }
+}
+
+/* Адаптивность: <= 480px - уменьшенные шрифты */
+@media (max-width: 480px) {
+  .breadcrumbs {
+    top: 100px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .details-header {
+    top: 130px;
+    height: 60px;
+  }
+  
+  .details-title {
+    font-size: 24px;
+  }
+  
+  .details-text {
+    top: 180px;
+    width: 100%;
+  }
+  
+  .bennu-RA {
+    font-size: 16px;
+  }
+  
+  .details-image {
+    top: 240px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.loading, .error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f0f0fa;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.error {
+  color: #dc3545;
+}
+
+@media (max-width: 480px) {
+  .loading, .error {
+    font-size: 18px;
+  }
+}

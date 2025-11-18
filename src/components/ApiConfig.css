@@ -1,0 +1,72 @@
+.api-config-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.api-config-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  color: #333;
+}
+
+.api-config-modal h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.api-config-modal .form-group {
+  margin-bottom: 1rem;
+}
+
+.api-config-modal label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.api-config-modal input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.api-config-modal .form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.api-config-bar {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.api-config-bar span {
+  color: #495057;
+}
+
+.api-config-bar .btn-link {
+  padding: 0;
+  text-decoration: underline;
+  color: #007bff;
+}
+
+

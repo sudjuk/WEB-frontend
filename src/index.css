@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Убеждаемся, что все элементы используют правильный шрифт */
+* {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+/* На странице услуг скролл только в .frame */
+body:has(.frame) {
+  overflow: hidden;
+}
+
+body:has(.frame) #root {
+  overflow: hidden;
+}
+
+/* На главной странице разрешаем прокрутку */
+body:has(.home-video-container) {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body:has(.home-video-container) #root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Reset anchor color inside dark theme by default */
+a { color: #9ecbff; }
